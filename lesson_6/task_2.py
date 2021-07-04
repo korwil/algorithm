@@ -22,15 +22,17 @@ print(numbers)
 print(f'первое минимальное число: {min_1}, второе: {min_2}')
 print(f'Для числа numbers памяти затрачено: {numbers.__sizeof__()} bytes. '
       f'Предполагаемо: 20+4*длина = {20 + 4 * len(numbers)}')
-
+# Для числа numbers памяти затрачено: 64 bytes. Предполагаемо: 20+4*длина = 64
 numbers = {12, -211, 3, -423, 12, -3, 425, -11, 3, 12, 12}
 
 print(f'Для числа numbers памяти затрачено: {numbers.__sizeof__()} bytes. '
       f'Предполагаемо: 100+8*длина = {100 + 8 * len(numbers)}')
+# Для числа numbers памяти затрачено: 356 bytes. Предполагаемо: 100+8*длина = 156
 # print(struct.unpack('L'*7+'lL'*8+'lL', ctypes.string_at(id(numbers), 100)))
 
 numbers = (12, -211, 3, -423, 12, -3, 425, -11, 3, 12, 12)
 print(f'Для числа numbers памяти затрачено: {numbers.__sizeof__()} bytes. '
       f'Предполагаемо: 12+4*длина = {12 + 4 * len(numbers)}')
+# Для числа numbers памяти затрачено: 56 bytes. Предполагаемо: 12+4*длина = 56
 
 
